@@ -1,0 +1,22 @@
+.registration-bg{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('../../Images/Background/registration.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.form-area{
+    padding: 40px;
+    background-color: #F24C4C;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.login-link {
+    color: aqua;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.login-link:hover {
+    color: blue;
+}

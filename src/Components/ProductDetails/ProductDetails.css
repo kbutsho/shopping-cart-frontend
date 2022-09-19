@@ -1,0 +1,7 @@
+.featuredImages:hover{
+    transition: 0.5s;
+}
+.featuredImages:hover{
+    transform: scale(1.6);
+    text-align: center;
+}

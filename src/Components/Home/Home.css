@@ -1,0 +1,32 @@
+.card .card-img {
+    overflow: hidden;
+}
+
+.card .card-img img {
+    display: block;
+    height: 200px;
+    width: 100%;
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+
+.card .card-img img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.card-group {
+    transition: 0.5s;
+}
+
+.card-group:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.card-body .product-name{
+    font-weight: bold;
+    color: blue;
+}
+.card-body .product-name:hover {
+    color: red;
+    cursor: pointer;
+}
