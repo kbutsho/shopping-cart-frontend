@@ -6,7 +6,7 @@ import Navbar from '../Navbar/Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import axios from 'axios';
 import "./Home.css"
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../Redux/Features/cartSlice';
 import data from '../../Data/Data.json'
@@ -18,12 +18,12 @@ const Home = () => {
         // axios.get('../../Data/Data.json')
         //     .then(res => setProduct(res.data))
     }, []);
-    console.log(product);
-    const history = useNavigate();
-    const details = (id) => {
-        const url = `/productDetails/${id}`;
-        history(url);
-    }
+    // console.log(product);
+    // const history = useNavigate();
+    // const details = (id) => {
+    //     const url = `/productDetails/${id}`;
+    //     history(url);
+    // }
 
     const dispatch = useDispatch();
     const handelAddToCart = (product) => {
@@ -46,12 +46,12 @@ const Home = () => {
                                 <div key={products.id} className="col-lg-3 col-md-4 col-sm-6" style={{ margin: " 0 auto 25px", }}>
                                     <div className="card-group" >
                                         <div className="card" style={{ height: '400px' }}>
-                                            <div className="card-img" onClick={() => details(products.id)}>
+                                            <div className="card-img">
                                                 {/* <img src={`https://laravel-shopping-cart.kbutsho.com/Upload/ProductPhotos/` + products.image} alt="img" /> */}
                                                 <img src={products.img} alt="img" />
                                             </div>
                                             <div className="card-body">
-                                                <p onClick={() => details(products.id)} style={{ height: "70px", textDecoration: "underline" }} className="product-name ">{products.name}</p>
+                                                <p  style={{ height: "70px", textDecoration: "underline" }} className="product-name ">{products.name}</p>
                                                 <span></span>
                                                 <div className="d-flex ">
                                                     <h3 className="text-danger fw-bold">
