@@ -4,18 +4,21 @@ import React, { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import axios from 'axios';
+//import axios from 'axios';
 import "./Home.css"
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../Redux/Features/cartSlice';
+import data from '../../Data/Data.json'
 
 const Home = () => {
     const [product, setProduct] = useState([])
     useEffect(() => {
-        axios.get('/api/allProducts')
-            .then(res => setProduct(res.data))
+        setProduct(data.products);
+        // axios.get('../../Data/Data.json')
+        //     .then(res => setProduct(res.data))
     }, []);
+    console.log(product);
     const history = useNavigate();
     const details = (id) => {
         const url = `/productDetails/${id}`;
@@ -44,7 +47,8 @@ const Home = () => {
                                     <div className="card-group" >
                                         <div className="card" style={{ height: '400px' }}>
                                             <div className="card-img" onClick={() => details(products.id)}>
-                                                <img src={`https://laravel-shopping-cart.kbutsho.com/Upload/ProductPhotos/` + products.image} alt="img" />
+                                                {/* <img src={`https://laravel-shopping-cart.kbutsho.com/Upload/ProductPhotos/` + products.image} alt="img" /> */}
+                                                <img src={products.img} alt="img" />
                                             </div>
                                             <div className="card-body">
                                                 <p onClick={() => details(products.id)} style={{ height: "70px", textDecoration: "underline" }} className="product-name ">{products.name}</p>

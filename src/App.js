@@ -12,14 +12,17 @@ import { ToastContainer } from 'react-toastify';
 import Cart from './Components/Cart/Cart';
 import "react-toastify/dist/ReactToastify.css"
 import Products from './Components/Products/Products';
-import AddProducts from './Components/Products/AddProducts';
+//import AddProducts from './Components/Products/AddProducts';
 import ProductList from './Components/Products/ProductList';
 import UpdateProduct from './Components/Products/UpdateProduct';
+//import Category from './Components/Category/Category';
+//import File from './Components/File/File';
 
 
-axios.defaults.baseURL = "https://laravel-shopping-cart.kbutsho.com/";
+axios.defaults.baseURL = "http://localhost:8000/api/v1";
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 axios.defaults.headers.post['Accept'] = 'application/json';
+
 
 const App = () => {
   return (
@@ -31,7 +34,8 @@ const App = () => {
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/products" element={<Products />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/addProduct" element={<AddProducts />} />
+        {/* <Route path="/test" element={<Category />}></Route>
+        <Route path="/addProduct" element={<AddProducts />} /> */}
         <Route path="/productList" element={<ProductList />} />
         <Route path="/updateProduct/:id" element={<UpdateProduct />} />
         <Route path="/registration" element={<Registration />} />

@@ -51,7 +51,7 @@ const AddProducts = () => {
         for (let i = 0; i < image.featuredImages.length; i++) {
             formData.append(`featuredImages[${i}]`, image.featuredImages[i])
         }
-        console.log(image, singleImage)
+        console.log(formData)
         formData.append("name", product.name)
         formData.append("quantity", product.quantity)
         formData.append("category", 'Phone')

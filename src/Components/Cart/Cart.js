@@ -67,7 +67,7 @@ const Cart = () => {
                             cart.cartItems.map((cartItem) => (
                                 <div className="cart-item" key={cartItem.id}>
                                     <div className="cart-product">
-                                        <img src={`https://laravel-shopping-cart.kbutsho.com/Upload/ProductPhotos/` + cartItem.image} alt={cartItem.name} />
+                                        <img src={cartItem.img} alt={cartItem.name} />
                                         <div>
                                             <h5>{cartItem.name}</h5>
                                             <p>{cartItem.category}</p>
