@@ -56,9 +56,9 @@ const Home = () => {
                                                 <div className="d-flex ">
                                                     <h3 className="text-danger fw-bold">
                                                         {products.price}$</h3>
-                                                    <i className="fa-solid fa-cart-shopping-fast"></i>
+                                                    {/* <i className="fa-solid fa-cart-shopping-fast"></i> */}
 
-                                                    <i className="mt-3 text-warning ms-auto fa-solid fa-star-half-stroke">  <small className='ms-1 text-black '>4.5</small> </i>
+                                                 <i className="mt-3 text-warning ms-auto fa-solid fa-star-half-stroke">  <small className='ms-1 text-black '>{products.ratings}</small> </i>
                                                 </div>
                                                 <button onClick={() => handelAddToCart(products)} className='w-100 mt-3 btn btn-primary'>Add to cart
                                                     <FontAwesomeIcon icon={faCartShopping} className="ms-2" />

@@ -102,7 +102,7 @@ const Cart = () => {
                             <p>Taxes and shipping calculated at checkout</p>
                             <button onClick={()=> checkOut()}>Check out</button>
                             <div className="continue-shopping">
-                                <Link to="/products">
+                                <Link to="/">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="20"

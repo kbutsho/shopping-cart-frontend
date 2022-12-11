@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import axios from 'axios';
+//import axios from 'axios';
 import Home from './Components/Home/Home';
 import Registration from './Components/Registration/Registration';
 import Error from './Components/Error/Error';
@@ -19,9 +19,9 @@ import UpdateProduct from './Components/Products/UpdateProduct';
 //import File from './Components/File/File';
 
 
-axios.defaults.baseURL = "http://localhost:8000/api/v1";
-axios.defaults.headers.post['Content-Type'] = 'application/json';
-axios.defaults.headers.post['Accept'] = 'application/json';
+// axios.defaults.baseURL = "http://localhost:8000/api/v1";
+// axios.defaults.headers.post['Content-Type'] = 'application/json';
+// axios.defaults.headers.post['Accept'] = 'application/json';
 
 
 const App = () => {
